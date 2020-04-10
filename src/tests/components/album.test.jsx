@@ -1,4 +1,4 @@
-import Album from '../../../components/Pages/Album';
+import Album from '../../components/Pages/Album';
 
 describe('<Album /> tests', function () {
     it('renders Album', function () {
