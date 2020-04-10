@@ -1,6 +1,5 @@
 var HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require('path');
-const webpack = require('webpack');
 
 /* plugins */
 const htmlPlugin = new HtmlWebPackPlugin({
@@ -17,19 +16,13 @@ module.exports = {
     module: {
         rules: [
             {
-              test: /\.m?js$/,
-              exclude: /(node_modules|bower_components)/,
-              use: {
-                loader: 'babel-loader',
-                options: {
-                  presets: ['@babel/env', '@babel/preset-react']
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader'
                 }
-              }
             }
-          ]
+        ]
     },
-    plugins: [
-        htmlPlugin,
-        new webpack.HotModuleReplacementPlugin(),
-    ]
+    plugins: [htmlPlugin]
 };
