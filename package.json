@@ -41,7 +41,7 @@
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
-    "babel-plugin-istanbul": "^4.1.6",
+    "babel-plugin-istanbul": "^6.0.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "chai": "^4.1.2",
@@ -52,7 +52,7 @@
     "jsdom": "^12.0.0",
     "jsdom-global": "^3.0.2",
     "mocha": "^5.2.0",
-    "nyc": "^12.0.2",
+    "nyc": "^15.0.1",
     "sinon": "^6.1.5",
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0",
@@ -60,6 +60,7 @@
   },
   "dependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2"
   }
 }
