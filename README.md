@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/alisonjonck/react-stretching.svg?branch=dev)](https://travis-ci.org/alisonjonck/react-stretching) [![codecov](https://codecov.io/gh/alisonjonck/react-stretching/branch/dev/graph/badge.svg)](https://codecov.io/gh/alisonjonck/react-stretching)
 
+Inspired by https://github.com/grupo-xp/challenge/tree/master/react
+
 
 ## Install
 
