@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "nyc mocha -r ignore-styles -r babel-plugin-require-context-hook/register -r @babel/register -r ./src/tests/setup/index.js --recursive \"./src/tests/**/*.test.js*\" --preset babel",
-    "test-debug": "mocha --inspect-brk --require babel-register -r ./src/tests/setup/index.js \"./src/tests/**/*.test.js*\"",
+    "test-debug": "mocha --inspect-brk -r ignore-styles -r babel-plugin-require-context-hook/register -r @babel/register -r ./src/tests/setup/index.js --recursive \"./src/tests/**/*.test.js*\" --preset babel",
     "start": "webpack-dev-server --mode development",
     "lint": "eslint \"src/**\"",
     "build": "webpack",
