@@ -1,3 +1,17 @@
 .default-container > label {
+    color: #B7B7B7;
+    font-size: 16px;
+}
+input:focus {
+    outline: none;
+}
+.default-container > input {
+    background-color: #151515;
+    font-size: 48px;
+    border: none;
+    border-bottom: 1px solid #FAFAFA;
     color: #FAFAFA;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #999999;
 }
