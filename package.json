@@ -52,7 +52,7 @@
     "babel-plugin-require-context-hook": "^1.0.0",
     "babel-preset-airbnb": "^5.0.0",
     "chai": "^4.1.2",
-    "codecov": "^3.0.4",
+    "codecov": "^3.6.5",
     "enzyme": "^3.4.4",
     "enzyme-adapter-react-16": "^1.2.0",
     "eslint": "^6.8.0",

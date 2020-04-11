@@ -1,7 +1,3 @@
-import React from 'react';
+import Album from './Album';
 
-export default () => {
-    return (
-        <h1>Album</h1>
-    );
-};
+export default Album;
