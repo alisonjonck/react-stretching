@@ -14,7 +14,7 @@ export default () => (
       <Route exact path="/">
         <Home />
       </Route>
-      <Route exact path="/albums/:nome">
+      <Route exact path="/albums/:album">
         <Album />
       </Route>
     </Switch>
