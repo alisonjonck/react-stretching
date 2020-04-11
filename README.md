@@ -1,6 +1,7 @@
 # react-stretching
 
-[![Build Status](https://travis-ci.org/alisonjonck/react-stretching.svg?branch=master)](https://travis-ci.org/alisonjonck/react-stretching)
+[![Build Status](https://travis-ci.org/alisonjonck/react-stretching.svg?branch=master)](https://travis-ci.org/alisonjonck/react-stretching) [![codecov](https://codecov.io/gh/alisonjonck/react-stretching/branch/dev/graph/badge.svg)](https://codecov.io/gh/alisonjonck/react-stretching)
+
 
 ## Install
 
