@@ -1,13 +1,8 @@
 import React from 'react';
-
-import './Home.css';
+import SearchField from '../../Mols/SearchField/SearchField';
 
 export default () => (
   <section className="default-container">
-    <label htmlFor="busca">
-      Busque por artistas, álbums ou músicas
-      <input type="text" name="busca" />
-    </label>
-
+    <SearchField />
   </section>
 );
