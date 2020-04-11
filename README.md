@@ -1,6 +1,6 @@
 # react-stretching
 
-[![Build Status](https://travis-ci.org/alisonjonck/react-stretching.svg?branch=hml)](https://travis-ci.org/alisonjonck/react-stretching) [![codecov](https://codecov.io/gh/alisonjonck/react-stretching/branch/hml/graph/badge.svg)](https://codecov.io/gh/alisonjonck/react-stretching)
+[![Build Status](https://travis-ci.org/alisonjonck/react-stretching.svg?branch=master)](https://travis-ci.org/alisonjonck/react-stretching) [![codecov](https://codecov.io/gh/alisonjonck/react-stretching/branch/master/graph/badge.svg)](https://codecov.io/gh/alisonjonck/react-stretching)
 
 Inspired by https://github.com/grupo-xp/challenge/tree/master/react
 
