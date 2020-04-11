@@ -1,4 +1,4 @@
-import Index from '../../../components/Pages/Index';
+import Index from '../../components/Pages/Index';
 
 describe('<Index /> tests', function () {
     it('renders Index', function () {

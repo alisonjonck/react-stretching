@@ -1,7 +1,4 @@
-import React from 'react';
+// eslint-disable-next-line import/extensions
+import Album from './Album.jsx';
 
-export default () => {
-    return (
-        <h1>Album</h1>
-    );
-};
+export default Album;

@@ -1,4 +1,4 @@
-import Home from '../../../components/Pages/Home';
+import Home from '../../components/Pages/Home';
 
 describe('<Home /> tests', function () {
     it('renders Home', function () {
