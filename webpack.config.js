@@ -38,4 +38,7 @@ module.exports = {
     open: true,
   },
   plugins: [htmlPlugin],
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
 };
