@@ -1,5 +1,13 @@
 import React from 'react';
 
+import './Home.css';
+
 export default () => (
-  <h1>Home</h1>
+  <section className="default-container">
+    <label htmlFor="busca">
+      Busque por artistas, álbums ou músicas
+      <input type="text" name="busca" />
+    </label>
+
+  </section>
 );

@@ -4,17 +4,13 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import styled from 'styled-components';
 import Home from '../Home';
 import Album from '../Album';
-
-const Wrapper = styled.section`
-  font-family: 'Roboto', sans-serif;
-`;
+import MainContainer from '../../Templates/MainContainer';
 
 export default () => (
   // eslint-disable-next-line react/jsx-filename-extension
-  <Wrapper>
+  <MainContainer>
     <Router>
       <Switch>
         <Route exact path="/">
@@ -25,5 +21,5 @@ export default () => (
         </Route>
       </Switch>
     </Router>
-  </Wrapper>
+  </MainContainer>
 );
