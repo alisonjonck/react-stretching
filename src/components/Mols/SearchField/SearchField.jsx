@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import styled from 'styled-components';
-import SearchInput from '../../Atoms/SearchInput';
+import SearchInput from '../../Atoms/SearchInput/SearchInput';
 
 import './SearchField.css';
 

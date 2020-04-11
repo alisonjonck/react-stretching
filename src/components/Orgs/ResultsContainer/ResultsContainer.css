@@ -1,0 +1,8 @@
+.results > h2 {
+    color: #FAFAFA;
+    margin-top: 80px;
+}
+
+.results > .results-container {
+    display: flex;
+}
