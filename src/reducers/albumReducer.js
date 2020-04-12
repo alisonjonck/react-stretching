@@ -4,6 +4,14 @@ const initialState = {
   album: undefined,
   recentAlbums: [],
 };
+let storedRecentAlbums;
+try {
+  storedRecentAlbums = JSON.parse(localStorage.getItem('recentAlbums'));
+} catch (error) {
+  // eslint-disable-next-line no-console
+  console.info('No recent results found');
+}
+initialState.recentAlbums = storedRecentAlbums;
 
 const albumReducer = (state = initialState, action) => {
   switch (action.type) {
