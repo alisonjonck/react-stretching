@@ -11,8 +11,8 @@ const htmlPlugin = new HtmlWebPackPlugin({
   filename: './index.html',
 });
 
-module.exports = () => {
-  const env = dotenv.config().parsed;
+module.exports = (envv) => {
+  const env = envv || dotenv.config().parsed;
   const envKeys = Object.keys(env).reduce((prev, next) => {
     // eslint-disable-next-line no-param-reassign
     prev[`process.env.${next}`] = JSON.stringify(env[next]);
