@@ -2,7 +2,29 @@
     color: #FAFAFA;
     width: 150px;
     height: 150px;
-    background: #999999;
+    background: #FAFAFA;
     margin: 30px;
     font-size: 18px;
+}
+
+.album-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.album-container > h3, .album-container > h4 {
+    color: #FAFAFA;
+    margin: 0;
+}
+
+.album-container > h3 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.album-container > h4 {
+    font-size: 14px;
+    margin-top: 8px;
+    color: #999999;
 }

@@ -8,10 +8,11 @@ const AlbumCard = (props) => {
   const { album, artist } = info;
 
   return (
-    <div className="album-card">
-      <span>Card</span>
-      {`${album}-${artist}`}
-    </div>
+    <section className="album-container">
+      <div className="album-card" />
+      <h3>{album}</h3>
+      <h4>{artist}</h4>
+    </section>
   );
 };
 
