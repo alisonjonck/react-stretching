@@ -1,5 +1,6 @@
 # react-stretching
-- Continuous Integration:
+
+## Continuous Integration:
 
 Master
 
@@ -13,7 +14,7 @@ Dev
 
 [![Build Status](https://travis-ci.org/alisonjonck/react-stretching.svg?branch=dev)](https://travis-ci.org/alisonjonck/react-stretching) [![codecov](https://codecov.io/gh/alisonjonck/react-stretching/branch/dev/graph/badge.svg)](https://codecov.io/gh/alisonjonck/react-stretching)
 
-- Continuous Delivery:
+## Continuous Delivery:
 
 Production(master): https://zen-austin-5690cc.netlify.com/ [![Netlify Status](https://api.netlify.com/api/v1/badges/3069388b-73a2-4555-aca3-fe26591649e4/deploy-status)](https://app.netlify.com/sites/upbeat-albattani-9fc75a/deploys)
 
