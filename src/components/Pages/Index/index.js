@@ -26,7 +26,7 @@ export default memo(() => {
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/albums/:artist" component={Album} />
+          <Route exact path="/albums/:album" component={Album} />
         </Switch>
       </Router>
     </MainContainer>
