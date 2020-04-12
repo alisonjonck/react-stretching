@@ -11,6 +11,12 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.album-container:hover {
+    background: rgba(0,0,0,0.5);
 }
 
 .album-container > h3, .album-container > h4 {
