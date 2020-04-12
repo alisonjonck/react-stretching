@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const dotenv = require('dotenv');
+// const dotenv = require('dotenv');
 
 /* plugins */
 const htmlPlugin = new HtmlWebPackPlugin({
@@ -11,8 +11,8 @@ const htmlPlugin = new HtmlWebPackPlugin({
   filename: './index.html',
 });
 
-module.exports = () => {
-  const env = dotenv.config().parsed;
+module.exports = (env) => {
+  // const env = dotenv.config().parsed;
   const envKeys = Object.keys(env).reduce((prev, next) => {
     // eslint-disable-next-line no-param-reassign
     prev[`process.env.${next}`] = JSON.stringify(env[next]);
