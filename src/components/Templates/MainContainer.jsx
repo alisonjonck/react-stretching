@@ -6,9 +6,9 @@ import Logo from '../Atoms/Logo/Logo';
 const Wrapper = styled.div`
     font-family: 'Roboto', sans-serif;
     margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
-    padding: 50px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding: 2vw;
 `;
 
 const MainContainer = (props) => {

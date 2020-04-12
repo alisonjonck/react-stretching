@@ -6,11 +6,15 @@ import { RECENT_RESULTS_TITLE } from '../../../constants/labels';
 const RecentResults = (props) => {
   const { recentResults } = props;
 
+  if (!recentResults || !recentResults.length) {
+    return null;
+  }
+
   return (
     <section className="results">
       <h2>{RECENT_RESULTS_TITLE}</h2>
       <div className="results-container">
-        {recentResults && recentResults.map((a, i) => <AlbumCard key={`a.album-${i}`} info={a} />)}
+        {recentResults.map((a, i) => <AlbumCard key={`a.album-${i}`} info={a} />)}
       </div>
     </section>
   );

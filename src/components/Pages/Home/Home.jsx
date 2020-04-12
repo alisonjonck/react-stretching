@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useDebouncedCallback } from 'use-lodash-debounce';
 import SearchField from '../../Mols/SearchField/SearchField';
 import ResultsContainer from '../../Orgs/ResultsContainer';
 import RecentResults from '../../Orgs/RecentResults';
@@ -12,19 +13,19 @@ export default memo(() => {
   const {
     searchValue, results, recentResults, accessToken,
   } = searchState;
-  const onSearchValueChange = (e) => {
-    const text = e.target.value;
-    dispatch({ type: SET_SEARCH, searchValue: text });
-    if (accessToken && text.length > 2) {
-      searchAlbums(text, accessToken).then((albums) => dispatch({
+  const onSearchValueChange = (value) => {
+    dispatch({ type: SET_SEARCH, searchValue: value });
+    if (accessToken && value.length > 2) {
+      searchAlbums(value, accessToken).then((albums) => dispatch({
         type: SET_SEARCH_RESULTS, results: albums,
       }));
     }
   };
+  const debounceOnChange = useDebouncedCallback(onSearchValueChange, 500);
 
   return (
     <section className="default-container">
-      <SearchField onChange={onSearchValueChange} />
+      <SearchField onChange={(e) => debounceOnChange(e.target.value)} />
       <ResultsContainer searchValue={searchValue} results={results} />
       <RecentResults recentResults={recentResults} />
     </section>
