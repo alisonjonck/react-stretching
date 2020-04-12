@@ -26,8 +26,8 @@ const authInstance = axios.create({
 
 export const authorize = () => {
   const params = new URLSearchParams();
-  params.append('client_id', process.env.SPOTIFY_CLIENT_ID);
-  params.append('client_secret', process.env.SPOTIFY_CLIENT_SECRET);
+  params.append('client_id', process.env.REACT_APP_SPOTIFY_CLIENT_ID);
+  params.append('client_secret', process.env.REACT_APP_SPOTIFY_CLIENT_SECRET);
   params.append('token_type', 'bearer');
   params.append('expires_in', 3600);
   params.append('grant_type', 'client_credentials');
