@@ -16,7 +16,9 @@ export default memo(() => {
     const text = e.target.value;
     dispatch({ type: SET_SEARCH, searchValue: text });
     if (accessToken && text.length > 2) {
-      searchAlbums(text, accessToken).then((results) => dispatch({ type: SET_SEARCH_RESULTS, results }));
+      searchAlbums(text, accessToken).then((albums) => dispatch({
+        type: SET_SEARCH_RESULTS, results: albums,
+      }));
     }
   };
 
