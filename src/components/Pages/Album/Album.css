@@ -1,0 +1,8 @@
+.album-page-container {
+    display: flex;
+}
+
+.album-page-container > .album-page-left-panel {
+    display: flex;
+    flex-direction: column;
+}

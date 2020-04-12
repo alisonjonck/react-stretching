@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 import './AlbumCard.css';
 
 const AlbumCard = (props) => {
-  const { info } = props;
+  const { info, disableClick } = props;
   const { album, artist, image } = info;
   const history = useHistory();
   const [goToAlbum, setGoToAlbum] = useState();
@@ -17,7 +17,7 @@ const AlbumCard = (props) => {
   }, [goToAlbum]);
 
   return (
-    <section className="album-container" onClick={() => setGoToAlbum(album)}>
+    <section className="album-container" onClick={() => !disableClick && setGoToAlbum(album)}>
       {!image
         ? <div className="album-card" />
         : <img className="album-card" alt={album} src={image} />}
@@ -27,7 +27,12 @@ const AlbumCard = (props) => {
   );
 };
 
+AlbumCard.defaultProps = {
+  disableClick: false,
+};
+
 AlbumCard.propTypes = {
+  disableClick: PropTypes.bool,
   info: PropTypes.shape({
     album: PropTypes.string,
     artist: PropTypes.string,

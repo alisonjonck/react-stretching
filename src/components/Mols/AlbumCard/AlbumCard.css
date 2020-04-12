@@ -22,10 +22,8 @@
 .album-container > h3, .album-container > h4 {
     color: #FAFAFA;
     margin: 0;
-    text-overflow: ellipsis;
     max-width: 200px;
-    white-space: nowrap;
-    overflow: hidden;
+    text-align: center;
 }
 
 .album-container > h3 {
