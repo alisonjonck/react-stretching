@@ -1,3 +1,4 @@
 src/tests/**
 index.html
 src/index.js
+**/*.css

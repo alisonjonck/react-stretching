@@ -1,5 +1,5 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-export default () => (
+export default memo(() => (
   <h1>Album</h1>
-);
+));

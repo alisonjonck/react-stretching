@@ -1,0 +1,9 @@
+#logo {
+    position: absolute;
+    width: 40px;
+    background: white;
+    top: 30px;
+    left: 30px;
+    border-radius: 50%;
+    border: none;
+}

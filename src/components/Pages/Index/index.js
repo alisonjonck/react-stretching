@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,17 +6,16 @@ import {
 } from 'react-router-dom';
 import Home from '../Home';
 import Album from '../Album';
+import MainContainer from '../../Templates/MainContainer';
 
-export default () => (
+export default memo(() => (
   // eslint-disable-next-line react/jsx-filename-extension
-  <Router>
-    <Switch>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route exact path="/albums/:album">
-        <Album />
-      </Route>
-    </Switch>
-  </Router>
-);
+  <MainContainer>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/albums/:artist" component={Album} />
+      </Switch>
+    </Router>
+  </MainContainer>
+));
