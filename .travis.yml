@@ -1,28 +1,15 @@
-{
-  "skip_cleanup": true,
-  "on": {
-    "branch": "dev"
-  },
-  "language": "node_js",
-  "os": [
-    "linux"
-  ],
-  "dist": "xenial",
-  "node_js": [
-    "stable"
-  ],
-  "script": [
-    "npm install",
-    "npm run lint",
-    "npm test",
-    "npm run build"
-  ],
-  "after_success": [
-    "npm run coverage && codecov"
-  ],
-  "env": {
-  "global": {
-    "secure": "eXMsepzjoJ9xDIVj1zB1ODF13ipmKbNJ/wOYEdbNRbcpAqcxZ+lyzMXnWInlRYajsQtdV7+PTO7R3jm8X/+BvmGZSPjGuLz3nqrkKRVe5zQpVTsUlhJyMUH0/0g0SmXueRMG71XP2OdmXIKmJ+jzjUIVcnm+1J4K0qGFpXju91vStcJX63x+TW50P1uU4S+3/19OFuIAWyxkiXKsjfD0l7V3Yt996Bs+SCyzRgq/BmruKeXUOXWbJ0cQ3W6MdlP399z9wqNhJ3LXdHIL+PReCmVTgLEIJzd6pEnUjU7F43pu0V/SNNmniYv0yjUksNdI0WAhD9Jh3sgOiAgaJTiQrhr/sqKDI9ibWhc2bhWQDpBKib3oZ3TnIkFB8vLmAiBusJCdMuk706NKXmmksQhpNAvIrKg9W0fFliD2TkLBU/W/EBr0ooAlwNt8rPv1pqBfs+S4JRzpI0gEDl2Fr65BnHgxIiBW2h7O2IieTYE83QKFtbBPQQcP1hKl76hDpfMG6pJh5JIaO+XnMqI9siOU68Qq1JOMyhQYMlM1NZuWhGRX5AEUhZ0fhE9DNwDP8wWRZZNtx1wNfXo2Ys4IOTmZyvNPVkwCB7GxjvXACHPJ18kDqm4gkrMGhB3bXQCxIwieEqKpEamBNaL5jpZLbw20PJt7p4h7Vpvn5oEF0omZMQs="
-    }
-  }
-}
+-language: node_js
+-node_js:
+-  - "stable"
+-script:
+-  - npm install
+-  - npm run lint
+-  - npm test
+-  - npm run build
+-after_success: npm run coverage && codecov
+-on:
+-  branch: dev
+env:
+  global:
+  - secure: eXMsepzjoJ9xDIVj1zB1ODF13ipmKbNJ/wOYEdbNRbcpAqcxZ+lyzMXnWInlRYajsQtdV7+PTO7R3jm8X/+BvmGZSPjGuLz3nqrkKRVe5zQpVTsUlhJyMUH0/0g0SmXueRMG71XP2OdmXIKmJ+jzjUIVcnm+1J4K0qGFpXju91vStcJX63x+TW50P1uU4S+3/19OFuIAWyxkiXKsjfD0l7V3Yt996Bs+SCyzRgq/BmruKeXUOXWbJ0cQ3W6MdlP399z9wqNhJ3LXdHIL+PReCmVTgLEIJzd6pEnUjU7F43pu0V/SNNmniYv0yjUksNdI0WAhD9Jh3sgOiAgaJTiQrhr/sqKDI9ibWhc2bhWQDpBKib3oZ3TnIkFB8vLmAiBusJCdMuk706NKXmmksQhpNAvIrKg9W0fFliD2TkLBU/W/EBr0ooAlwNt8rPv1pqBfs+S4JRzpI0gEDl2Fr65BnHgxIiBW2h7O2IieTYE83QKFtbBPQQcP1hKl76hDpfMG6pJh5JIaO+XnMqI9siOU68Qq1JOMyhQYMlM1NZuWhGRX5AEUhZ0fhE9DNwDP8wWRZZNtx1wNfXo2Ys4IOTmZyvNPVkwCB7GxjvXACHPJ18kDqm4gkrMGhB3bXQCxIwieEqKpEamBNaL5jpZLbw20PJt7p4h7Vpvn5oEF0omZMQs=
+  - secure: oRgqJvpyokcbbWTKXdY0Hrox6QWTKzeuvah0P/9nvImbExxw4Ha30p2owCo+IXUVxujGS3NGJ5GYS6UyD7GHVD9sWofZ3K8hDseRCqVJOWkRG2Y8WvCtGojJKapmsOJyoP/4oLq3ZuyPAgSbtULmYa3fmRlMO5lXY4qN2spxdIGx6ZDLoikfuQU8tie2BHNtd7/KPP9AxdkvG5dB9zsX09OUow/PNHzotdRWX3xkZvuuBLaaacfETSK5oJa0xB3DMVcy+CdmWKUyBHZo0vGpH8O1sMe2VgRHizk4jRQral4ZfxwtxkagQinhc9xE9bJfdGsBPvw1pH4BYSjN2F7seQW9Vu1Z9buxll5FcUF7gVYdJ8k8RGszGhpyhqFUK1UeBUH6gGMGwRXLIyQI5MBxjOGIaEV0cbZX7LpPcG0q9hEVOJe2e7DhpXjydukdOVcSw+uHrB7EwxlQ4JguR3NcahZVzd3afiihssPOHz4oKTxl0nC2hzlst0vZzn0J+EnSZ9WRo3H5rWgqnj/lIViB2Ce+b2ekByXL3jeoXIXP9QHAXr7s3EPG11A+OR8YKIy1uMWrIDg2lCwFRkU42MdVxMm++QRoOsywYuIL5XX9P3zDSEnJHzpda+HL97a1YyOpcjc6yGGM1YhDjz4o7Hq3rsIU9+G2HRpAsw9vEEBX4SU=
