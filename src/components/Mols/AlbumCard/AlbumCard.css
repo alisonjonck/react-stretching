@@ -1,7 +1,7 @@
 .album-card {
     color: #FAFAFA;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     background: #FAFAFA;
     margin: 15px;
     font-size: 18px;
@@ -16,6 +16,10 @@
 .album-container > h3, .album-container > h4 {
     color: #FAFAFA;
     margin: 0;
+    text-overflow: ellipsis;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .album-container > h3 {

@@ -10,6 +10,3 @@ after_success: npm run coverage && codecov
 skip_cleanup: true
 on:
   branch: dev
-env:
-  REACT_APP_SPOTIFY_CLIENT_ID=${SPOTIFY_CLIENT_ID}
-  REACT_APP_SPOTIFY_CLIENT_SECRET=${SPOTIFY_CLIENT_SECRET}
