@@ -10,7 +10,7 @@ const RecentResults = (props) => {
     <section className="results">
       <h2>{RECENT_RESULTS_TITLE}</h2>
       <div className="results-container">
-        {recentResults && recentResults.map((a) => <AlbumCard key={a.album} info={a} />)}
+        {recentResults && recentResults.map((a, i) => <AlbumCard key={`a.album-${i}`} info={a} />)}
       </div>
     </section>
   );
