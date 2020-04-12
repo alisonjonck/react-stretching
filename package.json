@@ -87,6 +87,7 @@
     "react-router-dom": "^5.1.2",
     "redux": "^4.0.5",
     "styled-components": "^5.1.0",
+    "travis": "^0.1.1",
     "use-lodash-debounce": "^1.1.0"
   }
 }

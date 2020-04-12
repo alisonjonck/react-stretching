@@ -14,8 +14,8 @@ export default memo(() => {
     searchValue, results, recentResults, accessToken,
   } = searchState;
   const onSearchValueChange = (value) => {
-    dispatch({ type: SET_SEARCH, searchValue: value });
     if (accessToken && value.length > 2) {
+      dispatch({ type: SET_SEARCH, searchValue: value });
       searchAlbums(value, accessToken).then((albums) => dispatch({
         type: SET_SEARCH_RESULTS, results: albums,
       }));
