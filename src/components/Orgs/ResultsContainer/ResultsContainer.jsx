@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AlbumCard from '../../Mols/AlbumCard';
+import { RESULTS_CONTAINER_TITLE } from '../../../constants/labels';
 
 import './ResultsContainer.css';
 
@@ -18,7 +19,7 @@ const ResultsContainer = (props) => {
 
   return (
     <section className="results">
-      <h2>{`Resultados encontrados para "${searchValue}"`}</h2>
+      <h2>{`${RESULTS_CONTAINER_TITLE} "${searchValue}"`}</h2>
       <div className="results-container">
         {mockedRecentAlbums.map((a) => <AlbumCard info={a} />)}
       </div>

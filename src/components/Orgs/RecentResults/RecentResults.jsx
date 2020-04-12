@@ -1,5 +1,6 @@
 import React from 'react';
 import AlbumCard from '../../Mols/AlbumCard';
+import { RECENT_RESULTS_TITLE } from '../../../constants/labels';
 
 const mockedRecentAlbums = [
   { artist: 'Artist 1', album: 'Album 1' },
@@ -10,7 +11,7 @@ const mockedRecentAlbums = [
 
 export default () => (
   <section className="results">
-    <h2>Álbums buscados recentemente</h2>
+    <h2>{RECENT_RESULTS_TITLE}</h2>
     <div className="results-container">
       {mockedRecentAlbums.map((a) => <AlbumCard info={a} />)}
     </div>

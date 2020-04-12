@@ -82,6 +82,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
+    "redux": "^4.0.5",
     "styled-components": "^5.1.0"
   }
 }

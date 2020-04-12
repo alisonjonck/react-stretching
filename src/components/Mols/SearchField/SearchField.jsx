@@ -2,6 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import SearchInput from '../../Atoms/SearchInput/SearchInput';
+import { INPUT_SEARCH_LABEL } from '../../../constants/labels';
 
 import './SearchField.css';
 
@@ -14,7 +15,7 @@ const Wrapper = styled.div`
 export default () => (
   <Wrapper className="default-container">
     <label htmlFor="busca">
-      Busque por artistas, álbums ou músicas
+      {INPUT_SEARCH_LABEL}
     </label>
     <SearchInput name="busca" />
   </Wrapper>
