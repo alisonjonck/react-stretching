@@ -13,12 +13,8 @@ export default memo(() => (
   <MainContainer>
     <Router>
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/albums/:artist">
-          <Album />
-        </Route>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/albums/:artist" component={Album} />
       </Switch>
     </Router>
   </MainContainer>
