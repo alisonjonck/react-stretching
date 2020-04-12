@@ -1,5 +1,5 @@
 # react-stretching
-
+- CI
 Master
 
 [![Build Status](https://travis-ci.org/alisonjonck/react-stretching.svg?branch=master)](https://travis-ci.org/alisonjonck/react-stretching) [![codecov](https://codecov.io/gh/alisonjonck/react-stretching/branch/master/graph/badge.svg)](https://codecov.io/gh/alisonjonck/react-stretching)
@@ -11,6 +11,11 @@ Homolog
 Dev
 
 [![Build Status](https://travis-ci.org/alisonjonck/react-stretching.svg?branch=dev)](https://travis-ci.org/alisonjonck/react-stretching) [![codecov](https://codecov.io/gh/alisonjonck/react-stretching/branch/dev/graph/badge.svg)](https://codecov.io/gh/alisonjonck/react-stretching)
+
+- CD
+Prd: https://zen-austin-5690cc.netlify.com/
+Hml: https://zen-austin-5690cc.netlify.com/
+Dev: https://zen-austin-5690cc.netlify.com/
 
 Inspired by https://github.com/grupo-xp/challenge/tree/master/react
 
