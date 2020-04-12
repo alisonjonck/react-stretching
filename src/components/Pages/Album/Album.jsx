@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 import AlbumCard from '../../Mols/AlbumCard';
-import { SET_SEARCH, SET_SEARCH_RESULTS } from '../../../constants/action-types';
-import { searchAlbums } from '../../../services/spotify.service';
+import { SET_SEARCH, SET_SEARCH_RESULTS, SET_ALBUM } from '../../../constants/action-types';
+import { searchAlbums, getAlbum } from '../../../services/spotify.service';
 import AlbumSongs from '../../Orgs/AlbumSongs';
 
 import './Album.css';
@@ -35,15 +35,24 @@ const Album = (props) => {
   const results = useSelector((state) => state.search.results);
   const accessToken = useSelector((state) => state.search.accessToken);
   const info = results.find((r) => r.album === album);
+  const tracks = useSelector((state) => state.album.album);
   const history = useHistory();
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (!info && accessToken && album.length > 2) {
-      dispatch({ type: SET_SEARCH, searchValue: album });
-      searchAlbums(album, accessToken).then((albums) => dispatch({
-        type: SET_SEARCH_RESULTS, results: albums,
-      }));
+    if (accessToken) {
+      if (!info && album.length > 2) {
+        dispatch({ type: SET_SEARCH, searchValue: album });
+        searchAlbums(album, accessToken).then((albums) => dispatch({
+          type: SET_SEARCH_RESULTS, results: albums,
+        }));
+      }
+
+      if (info) {
+        getAlbum(info.id, accessToken).then((songs) => dispatch({
+          type: SET_ALBUM, album: songs,
+        }));
+      }
     }
   });
 
@@ -56,7 +65,7 @@ const Album = (props) => {
         {info && <AlbumCard disableClick info={info} />}
       </div>
       <AlbumSongsWrapper>
-        <AlbumSongs songs={[{ name: 'test', index: 1 }, { name: 'tes2', index: 2 }, { name: 'tes3', index: 3 }, { name: 'tes4', index: 4 }]} />
+        {tracks && <AlbumSongs songs={tracks} />}
       </AlbumSongsWrapper>
     </section>
   );

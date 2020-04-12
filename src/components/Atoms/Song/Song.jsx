@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import msToMinutesAndSeconds from '../../../utils/msToMinutesAndSeconds';
 
 const Wrapper = styled.div`
     display: flex;
@@ -24,7 +25,7 @@ const Song = ({ info }) => (
   <Wrapper>
     <span>{`${info.index}.`}</span>
     <p>{info.name}</p>
-    <span>{`${info.index}.`}</span>
+    <span>{`${msToMinutesAndSeconds(info.duration)}`}</span>
   </Wrapper>
 );
 
@@ -32,6 +33,7 @@ Song.propTypes = {
   info: PropTypes.shape({
     index: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
+    duration: PropTypes.number.isRequired,
   }).isRequired,
 };
 

@@ -6,6 +6,17 @@ const instance = axios.create({
 
 export default instance;
 
+export const getAlbum = (id, token) => instance.get(`albums/${id}`, {
+  headers: {
+    Authorization: `Bearer ${token}`,
+  },
+}).then((response) => response.data.tracks.items)
+  .then((tracks) => tracks.map((t) => ({
+    index: t.track_number,
+    name: t.name,
+    duration: t.duration_ms,
+  })));
+
 export const searchAlbums = (searchValue, token) => instance.get(`search?type=album&q=${searchValue}`, {
   headers: {
     Authorization: `Bearer ${token}`,
@@ -15,6 +26,7 @@ export const searchAlbums = (searchValue, token) => instance.get(`search?type=al
     artist: a.artists.map((artist) => artist.name).join('/ '),
     album: a.name,
     image: a.images && a.images.length && a.images[0].url,
+    id: a.id,
   })));
 
 const authInstance = axios.create({
@@ -32,5 +44,7 @@ export const authorize = () => {
   params.append('expires_in', 3600);
   params.append('grant_type', 'client_credentials');
 
-  return authInstance.post('token', params).then((response) => response.data.access_token);
+  return authInstance.post('token', params)
+    .then((response) => response.data.access_token)
+    .catch(() => undefined);
 };
