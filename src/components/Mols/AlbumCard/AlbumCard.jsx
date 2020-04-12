@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
 import './AlbumCard.css';
@@ -22,4 +22,4 @@ AlbumCard.propTypes = {
   }).isRequired,
 };
 
-export default AlbumCard;
+export default memo(AlbumCard);

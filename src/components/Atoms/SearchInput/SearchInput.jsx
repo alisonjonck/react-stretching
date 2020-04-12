@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import { INPUT_SEARCH_PLACEHOLDER } from '../../../constants/labels';
 
@@ -14,4 +14,4 @@ SearchInput.propTypes = {
   name: PropTypes.string.isRequired,
 };
 
-export default SearchInput;
+export default memo(SearchInput);

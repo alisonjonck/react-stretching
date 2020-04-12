@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import AlbumCard from '../../Mols/AlbumCard';
 import { RESULTS_CONTAINER_TITLE } from '../../../constants/labels';
@@ -21,7 +21,7 @@ const ResultsContainer = (props) => {
     <section className="results">
       <h2>{`${RESULTS_CONTAINER_TITLE} "${searchValue}"`}</h2>
       <div className="results-container">
-        {mockedRecentAlbums.map((a) => <AlbumCard info={a} />)}
+        {mockedRecentAlbums.map((a) => <AlbumCard key={a.album} info={a} />)}
       </div>
     </section>
   );
@@ -35,4 +35,4 @@ ResultsContainer.defaultProps = {
   searchValue: undefined,
 };
 
-export default ResultsContainer;
+export default memo(ResultsContainer);

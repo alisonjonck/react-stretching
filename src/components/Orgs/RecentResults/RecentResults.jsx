@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import AlbumCard from '../../Mols/AlbumCard';
 import { RECENT_RESULTS_TITLE } from '../../../constants/labels';
 
@@ -9,11 +9,11 @@ const mockedRecentAlbums = [
   { artist: 'Artist 4', album: 'Album 4' },
 ];
 
-export default () => (
+export default memo(() => (
   <section className="results">
     <h2>{RECENT_RESULTS_TITLE}</h2>
     <div className="results-container">
-      {mockedRecentAlbums.map((a) => <AlbumCard info={a} />)}
+      {mockedRecentAlbums.map((a) => <AlbumCard key={a.album} info={a} />)}
     </div>
   </section>
-);
+));

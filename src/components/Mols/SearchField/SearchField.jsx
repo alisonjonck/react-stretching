@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react';
+import React, { memo } from 'react';
 import styled from 'styled-components';
 import SearchInput from '../../Atoms/SearchInput/SearchInput';
 import { INPUT_SEARCH_LABEL } from '../../../constants/labels';
@@ -12,11 +12,11 @@ const Wrapper = styled.div`
     width: 100%;
 `;
 
-export default () => (
+export default memo(() => (
   <Wrapper className="default-container">
     <label htmlFor="busca">
       {INPUT_SEARCH_LABEL}
     </label>
     <SearchInput name="busca" />
   </Wrapper>
-);
+));

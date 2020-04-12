@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Logo from '../Atoms/Logo/Logo';
@@ -26,4 +26,4 @@ MainContainer.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default MainContainer;
+export default memo(MainContainer);
