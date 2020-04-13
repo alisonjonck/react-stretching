@@ -11,7 +11,7 @@ import AlbumSongs from '../../Orgs/AlbumSongs';
 import './Album.css';
 
 const AlbumSongsWrapper = styled.div`
-  margin-top: 70px;
+  margin-top: 30px;
   margin-left: 30px;
 `;
 
