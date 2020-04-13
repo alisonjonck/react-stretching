@@ -34,7 +34,7 @@ const Album = (props) => {
   const { album } = match.params;
   const results = useSelector((state) => state.search.results);
   const accessToken = useSelector((state) => state.search.accessToken);
-  const info = results.find((r) => r.album === album);
+  const info = results.find((r) => r.album.replace(/\//g, '') === album);
   const tracks = useSelector((state) => state.album.album);
   const history = useHistory();
   const dispatch = useDispatch();

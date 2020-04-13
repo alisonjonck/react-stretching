@@ -12,7 +12,8 @@ const AlbumCard = (props) => {
 
   useEffect(() => {
     if (goToAlbum) {
-      history.push(`/albums/${goToAlbum}`);
+      // eslint-disable-next-line no-undef
+      history.push(`/albums/${encodeURI(goToAlbum.replace(/\//g, ''))}`);
     }
   }, [goToAlbum]);
 
