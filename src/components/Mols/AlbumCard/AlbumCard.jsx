@@ -1,25 +1,42 @@
-import React, { memo } from 'react';
+import React, { memo, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { useHistory } from 'react-router-dom';
 
 import './AlbumCard.css';
 
 const AlbumCard = (props) => {
-  const { info } = props;
-  const { album, artist } = info;
+  const { info, disableClick } = props;
+  const { album, artist, image } = info;
+  const history = useHistory();
+  const [goToAlbum, setGoToAlbum] = useState();
+
+  useEffect(() => {
+    if (goToAlbum) {
+      history.push(`/albums/${goToAlbum}`);
+    }
+  }, [goToAlbum]);
 
   return (
-    <section className="album-container">
-      <div className="album-card" />
+    <section className="album-container" onClick={() => !disableClick && setGoToAlbum(album)}>
+      {!image
+        ? <div className="album-card" />
+        : <img className="album-card" alt={album} src={image} />}
       <h3>{album}</h3>
       <h4>{artist}</h4>
     </section>
   );
 };
 
+AlbumCard.defaultProps = {
+  disableClick: false,
+};
+
 AlbumCard.propTypes = {
+  disableClick: PropTypes.bool,
   info: PropTypes.shape({
     album: PropTypes.string,
     artist: PropTypes.string,
+    image: PropTypes.string,
   }).isRequired,
 };
 

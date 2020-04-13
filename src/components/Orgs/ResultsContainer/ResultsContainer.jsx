@@ -15,7 +15,7 @@ const ResultsContainer = (props) => {
     <section className="results">
       <h2>{`${noResultsMessage || RESULTS_CONTAINER_TITLE} "${searchValue}"`}</h2>
       <div className="results-container">
-        {!noResultsMessage && results.map((a) => <AlbumCard key={a.album} info={a} />)}
+        {!noResultsMessage && results.map((a, i) => <AlbumCard key={`a.album-${i}`} info={a} />)}
       </div>
     </section>
   );

@@ -1,15 +1,12 @@
-import { SET_SEARCH, SET_SEARCH_RESULTS, ADD_RECENT_RESULTS } from '../constants/action-types';
+import {
+  SET_SEARCH, SET_SEARCH_RESULTS, ADD_RECENT_RESULTS, SET_ACCESS_TOKEN,
+} from '../constants/action-types';
 
-const mockedResults = [
-  { artist: 'Artist 1', album: 'Album 1' },
-  { artist: 'Artist 2', album: 'Album 2' },
-  { artist: 'Artist 3', album: 'Album 3' },
-  { artist: 'Artist 4', album: 'Album 4' },
-];
 const initialState = {
   searchValue: undefined,
-  results: mockedResults, // [],
-  recentResults: mockedResults, // [],
+  accessToken: undefined,
+  results: [],
+  recentResults: [],
 };
 
 let storedRecentResults;
@@ -28,6 +25,9 @@ const searchReducer = (state = initialState, action) => {
 
     case SET_SEARCH_RESULTS:
       return { ...state, results: action.results };
+
+    case SET_ACCESS_TOKEN:
+      return { ...state, accessToken: action.accessToken };
 
     case ADD_RECENT_RESULTS:
       state.recentResults.push(action.results);
