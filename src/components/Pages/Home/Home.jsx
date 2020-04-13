@@ -10,8 +10,9 @@ import { searchAlbums } from '../../../services/spotify.service';
 export default memo(() => {
   const dispatch = useDispatch();
   const searchState = useSelector((state) => state.search);
+  const recentAlbums = useSelector((state) => state.album.recentAlbums);
   const {
-    searchValue, results, recentResults, accessToken,
+    searchValue, results, accessToken,
   } = searchState;
   const onSearchValueChange = (value) => {
     if (accessToken && value.length > 2) {
@@ -27,7 +28,7 @@ export default memo(() => {
     <section className="default-container">
       <SearchField onChange={(e) => debounceOnChange(e.target.value)} />
       <ResultsContainer searchValue={searchValue} results={results} />
-      <RecentResults recentResults={recentResults} />
+      {recentAlbums && <RecentResults recentResults={recentAlbums.map((a) => a.info)} />}
     </section>
   );
 });
