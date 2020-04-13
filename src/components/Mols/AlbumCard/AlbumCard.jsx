@@ -6,7 +6,9 @@ import './AlbumCard.css';
 
 const AlbumCard = (props) => {
   const { info, disableClick } = props;
-  const { album, artist, image } = info;
+  const {
+    album, artist, image,
+  } = info;
   const history = useHistory();
   const [goToAlbum, setGoToAlbum] = useState();
 
@@ -38,6 +40,7 @@ AlbumCard.propTypes = {
     album: PropTypes.string,
     artist: PropTypes.string,
     image: PropTypes.string,
+    id: PropTypes.string,
   }).isRequired,
 };
 

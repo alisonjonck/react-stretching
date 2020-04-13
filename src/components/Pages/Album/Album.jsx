@@ -48,13 +48,13 @@ const Album = (props) => {
         }));
       }
 
-      if (info) {
+      if (info && (!tracks || !tracks.length)) {
         getAlbum(info.id, accessToken).then((songs) => dispatch({
           type: SET_ALBUM, album: songs,
         }));
       }
     }
-  });
+  }, [results, accessToken]);
 
   return (
     <section className="album-page-container">
