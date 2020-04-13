@@ -1,9 +1,9 @@
 .album-card {
     color: #FAFAFA;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     background: #FAFAFA;
-    margin: 30px;
+    margin: 15px;
     font-size: 18px;
 }
 
@@ -11,11 +11,19 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.album-container:hover {
+    background: rgba(0,0,0,0.5);
 }
 
 .album-container > h3, .album-container > h4 {
     color: #FAFAFA;
     margin: 0;
+    max-width: 200px;
+    text-align: center;
 }
 
 .album-container > h3 {
