@@ -6,13 +6,16 @@ import './AlbumCard.css';
 
 const AlbumCard = (props) => {
   const { info, disableClick } = props;
-  const { album, artist, image } = info;
+  const {
+    album, artist, image,
+  } = info;
   const history = useHistory();
   const [goToAlbum, setGoToAlbum] = useState();
 
   useEffect(() => {
     if (goToAlbum) {
-      history.push(`/albums/${goToAlbum}`);
+      // eslint-disable-next-line no-undef
+      history.push(`/albums/${encodeURI(goToAlbum.replace(/\//g, ''))}`);
     }
   }, [goToAlbum]);
 
@@ -37,6 +40,7 @@ AlbumCard.propTypes = {
     album: PropTypes.string,
     artist: PropTypes.string,
     image: PropTypes.string,
+    id: PropTypes.string,
   }).isRequired,
 };
 

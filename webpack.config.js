@@ -11,12 +11,21 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = () => {
-  const env = dotenv.config().parsed;
-  const envKeys = Object.keys(env).reduce((prev, next) => {
-    // eslint-disable-next-line no-param-reassign
-    prev[`process.env.${next}`] = JSON.stringify(env[next]);
-    return prev;
-  }, {});
+  const isCiBuild = !!process.env.CI;
+  let envKeys = {};
+
+  if (isCiBuild) {
+    envKeys['process.env.NODE_ENV'] = JSON.stringify(process.env.NODE_ENV);
+    envKeys['process.env.REACT_APP_SPOTIFY_CLIENT_ID'] = JSON.stringify(process.env.REACT_APP_SPOTIFY_CLIENT_ID);
+    envKeys['process.env.REACT_APP_SPOTIFY_CLIENT_SECRET'] = JSON.stringify(process.env.REACT_APP_SPOTIFY_CLIENT_SECRET);
+  } else {
+    const env = dotenv.config().parsed;
+    envKeys = Object.keys(env).reduce((prev, next) => {
+      // eslint-disable-next-line no-param-reassign
+      prev[`process.env.${next}`] = JSON.stringify(env[next]);
+      return prev;
+    }, {});
+  }
 
   return {
     entry: './src/index.js',
