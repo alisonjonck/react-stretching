@@ -26,6 +26,7 @@ const Wrapper = styled.div`
     }
     &:hover {
         background: rgba(0,0,0,0.5);
+        border-radius: 8px;
     }
 `;
 
