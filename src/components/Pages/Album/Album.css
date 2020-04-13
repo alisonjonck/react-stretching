@@ -2,6 +2,15 @@
     display: flex;
 }
 
+@media only screen and (max-width: 600px) {
+    .album-page-container {
+        flex-direction: column;
+    }
+    .album-page-left-panel>button {
+        margin-top: 30px;
+    }
+}
+
 .album-page-container > .album-page-left-panel {
     display: flex;
     flex-direction: column;

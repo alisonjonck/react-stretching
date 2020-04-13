@@ -1,6 +1,7 @@
 .results > h2 {
     color: #FAFAFA;
-    margin-top: 80px;
+    margin-top: 30px;
+    font-size: 24px;
 }
 
 .results > .results-container {
@@ -12,5 +13,8 @@
 @media only screen and (max-width: 600px) {
     .results > .results-container {
         zoom: 0.6;
+    }
+    .results > h2 {
+        font-size: 18px;
     }
 }
