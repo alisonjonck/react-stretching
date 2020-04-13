@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import msToMinutesAndSeconds from '../../../utils/msToMinutesAndSeconds';
 
 const AudioPlayer = styled.audio`
-    width: 150px;
+    min-width: 150px;
     height: 50px;
     padding: 5px 0;
     margin-right: 20px;
