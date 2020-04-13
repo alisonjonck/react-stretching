@@ -16,7 +16,10 @@ initialState.recentAlbums = storedRecentAlbums;
 const albumReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_ALBUM:
-      return { ...state, album: action.album };
+      const newState = { ...state };
+      if (!newState.recentAlbums) { newState.recentAlbums = []; }
+      newState.recentAlbums.push(action.album);
+      return { ...newState, album: action.album };
 
     case ADD_RECENT_ALBUM:
       state.recentAlbums.push(action.album);
