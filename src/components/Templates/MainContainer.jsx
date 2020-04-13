@@ -9,6 +9,11 @@ const Wrapper = styled.div`
     margin-left: 5vw;
     margin-right: 5vw;
     padding: 2vw;
+
+    @media only screen and (max-width: 600px) {
+      margin-left: 1vw;
+      margin-right: 1vw;
+    }
 `;
 
 const MainContainer = (props) => {
