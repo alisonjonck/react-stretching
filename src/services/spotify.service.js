@@ -15,6 +15,7 @@ export const getAlbum = (id, token) => instance.get(`albums/${id}`, {
     index: t.track_number,
     name: t.name,
     duration: t.duration_ms,
+    preview: t.preview_url,
   })));
 
 export const searchAlbums = (searchValue, token) => instance.get(`search?type=album&q=${searchValue}`, {

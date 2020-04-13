@@ -54,7 +54,7 @@ const Album = (props) => {
         }));
       }
     }
-  }, [results, accessToken]);
+  }, [results, accessToken, tracks, info]);
 
   return (
     <section className="album-page-container">
