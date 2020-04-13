@@ -9,6 +9,9 @@ const AudioPlayer = styled.audio`
     height: 50px;
     padding: 5px 0;
     margin-right: 20px;
+    @media only screen and (max-width: 600px) {
+        margin-bottom: 10px;
+    }
 `;
 
 const Wrapper = styled.div`
@@ -16,6 +19,11 @@ const Wrapper = styled.div`
     justify-content: flex-start;
     align-items: center;
     padding: 0 10px;
+    @media only screen and (max-width: 600px) {
+        flex-direction: column-reverse;
+        margin-bottom: 20px;
+        width: fit-content;
+    }
     span {
         color: #999999;
     }
@@ -29,6 +37,11 @@ const Wrapper = styled.div`
         border-radius: 8px;
     }
 `;
+const TextWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
 
 const Song = ({ info }) => (
   <Wrapper>
@@ -37,9 +50,11 @@ const Song = ({ info }) => (
       <source src={info.preview} />
     </AudioPlayer>
     )}
-    <span>{`${info.index}.`}</span>
-    <p>{info.name}</p>
-    <span>{`${msToMinutesAndSeconds(info.duration)}`}</span>
+    <TextWrapper>
+      <span>{`${info.index}.`}</span>
+      <p>{info.name}</p>
+      <span>{`${msToMinutesAndSeconds(info.duration)}`}</span>
+    </TextWrapper>
   </Wrapper>
 );
 
